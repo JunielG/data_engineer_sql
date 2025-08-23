@@ -1,0 +1,55 @@
+## Key Features
+Data Ingestion
+- Multiple data source support (APIs, CSV, JSON files)
+- Asynchronous data extraction for better performance
+- Rate limiting and error handling
+- Configurable batch processing
+
+Data Transformation
+- Data cleaning and standardization
+- Date format normalization
+- Record deduplication using hashing
+- Data aggregation capabilities
+- Metadata enrichment
+
+Data Storage
+- SQLite database for reliable storage
+- Separate tables for raw and processed data
+- Transaction management and error recovery
+- Data export to CSV and JSON formats
+
+Pipeline Orchestration
+- Configurable pipeline runs
+- Batch processing with configurable sizes
+- Comprehensive error handling and logging
+- Run metadata tracking
+
+Monitoring & Scheduling
+- Pipeline run statistics and monitoring
+- Scheduled execution (daily/hourly)
+- Comprehensive logging system
+- Status reporting and health checks
+
+Architecture Components
+- DataSource Classes - Abstract base for different data sources
+- DataTransformer - Handles cleaning, validation, and transformations
+- DataStorage - Manages database operations and file exports
+- DataPipeline - Main orchestrator that coordinates all components
+- PipelineScheduler - Handles automated scheduling and monitoring
+
+## Usage Examples
+The pipeline includes a demo function that shows how to:
+- Set up data sources (API and file-based)
+- Configure the pipeline
+- Run data processing
+- Monitor results and status
+
+## Production Considerations
+To adapt this for production use:
+- Replace sample data sources with your actual APIs, databases, or file systems
+- Configure authentication for your data sources
+- Set up proper monitoring and alerting
+- Scale the database (consider PostgreSQL or cloud databases)
+- Add data quality checks and validation rules
+- Implement retry mechanisms for failed operations
+- Set up proper secrets management for API keys and credentials
